@@ -5,5 +5,7 @@
 @endsection
 
 @section('body')
-
+<p>
+  Un exemple d'index
+</p>
 @endsection
