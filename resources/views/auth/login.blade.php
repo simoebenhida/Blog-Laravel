@@ -7,8 +7,8 @@
 @section('body')
 
     <div class="col-md-4 col-md-offset-4">
-      <form class="" action="" method="post">
-
+      <form class="" action="{{ route('post_login') }}" method="post">
+        {{ csrf_field() }}
         <div class="form-group">
           <label for="name">Email :</label>
             <input type="text" name="email" class="form-control" value="">

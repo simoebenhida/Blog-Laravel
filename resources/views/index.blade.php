@@ -5,7 +5,9 @@
 @endsection
 
 @section('body')
-<p>
-  Un exemple d'index
-</p>
+@if(Auth::check())
+    <p>{{ Auth::user()->name }}</p>
+@else
+  <p>not connected</p>
+@endif
 @endsection
