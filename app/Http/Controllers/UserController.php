@@ -42,7 +42,7 @@ class UserController extends Controller
         return redirect()->route('home');
       }
       else {
-        Session::flash('erreur_login','Email ou Mot de passe incorect');
+        Session::flash('erreur_login','Email ou Mot de passe inccorect');
         return redirect()->back();
       }
     }
