@@ -24,7 +24,18 @@ Route::group(['middleware' => ['etre_connecter']], function () {
     'uses' => 'UserController@post_register',
     'as' => 'post_register'
   ]);
-
+  Route::get('blog/{slug}',[
+    'uses' => 'BlogController@single_blog',
+    'as' => 'single_blog'
+  ]);
+  Route::get('blog/edit/{slug}',[
+    'uses' => 'BlogController@edit',
+    'as' => 'edit_blog'
+  ]);
+  Route::post('blog/edit/{slug}',[
+    'uses' => 'BlogController@update',
+    'as' => 'blog.update'
+  ]);
 });
 Route::get('blog/create',[
   'uses' => 'BlogController@create',

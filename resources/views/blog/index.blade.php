@@ -10,16 +10,18 @@
         <li>{{ Session::get('success')}}</li>
       </ul>
     @endif
+    @foreach($blogs as $blog)
     <div class="panel panel-default">
       <div class="panel-heading">
-        Titre du Blog
+        {{ $blog->titre }}
       </div>
       <div class="panel-body">
-        Blog content
-          <a href="#"><p class="pull-right">lire la suite ...</p></a>
+        {{ $blog->body }}
+          <a href="{{ route('single_blog',$blog->slug)}}"><p class="pull-right">lire la suite ...</p></a>
       </div>
 
     </div>
+  @endforeach
   </div>
 
 @endsection
